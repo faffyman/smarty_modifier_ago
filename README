@@ -1,0 +1,40 @@
+README
+=====================================================================
+
+This modifier is designed for use with Smarty v3
+If you are familiar with Smarty templating engine this will be fairly 
+easy for you to use.
+
+Simply drop the modifier into your Smarty plugins directory.
+
+=====================================================================
+
+Useage: 
+
+simple                {$dTimestamp|ago}  
+or specifiying a unit {dTimestamp|ago:'week'}
+
+The possible units accepted are singular forms, one of 
+'minute','hour','day','week','month','year'
+
+If no unit is secified, the plugin will work out the 'best' unit based 
+on the length of time that has passed since that timestamp.
+
+EXAMPLE
+=====================================================================
+From within your *.tpl template file you can do something like this
+
+  <h2>{$sArticleTitle|esape}</h2>
+  Posted: {$sArticleTimestamp|ago:'day'}
+
+Which might show
+
+  My Article Title
+  Posted: 6 days ago
+
+=====================================================================
+
+For more information on Smarty Modifiers view the documentation at
+
+http://www.smarty.net/docs/en/plugins.tpl
+http://www.smarty.net/docs/en/plugins.modifiers.tpl

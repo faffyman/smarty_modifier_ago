@@ -12,11 +12,11 @@
  * Type:     modifier
  * Name:     ago
  * Purpose:  allows you to present a date timestamp as X (minutes|hours|days|weeks|months) Ago
- * Useage:   {$dTimestamp|ago}  or specifiying a unit {dTimestamp|ago:'week'}
+ * Usage:   {$dTimestamp|ago}  or specifying a unit {dTimestamp|ago:'week'}
  *
  * @link
  * @author faffyman@ahoo.com>
- * @param timestamp $sTimestamp
+ * @param int $sTimestamp
  * @param string $sUnits preferred units specified in the singular - 'minute','hour','day','week','month','year'. This will over-ride the default
  * @return string
  */
@@ -44,7 +44,7 @@ function smarty_modifier_ago($sTimestamp, $sUnits=null)
     $aTimes['day']    = array('nDivideBy'=>86400         ,'sLabel'=>'day'    ,'nMax'=>604800);
     $aTimes['week']   = array('nDivideBy'=>604800        ,'sLabel'=>'week'   ,'nMax'=>(86400 * 30.4));
     $aTimes['month']  = array('nDivideBy'=>(86400 * 30.4),'sLabel'=>'month'  ,'nMax'=>(86400 * 365)); //30.4 days in a month (on average)
-    $aTimes['year']   = array('nDivideBy'=>(86400 * 365) ,'sLabel'=>'year'   ,'nMax'=>( (86400 * 365.25) * 999)); //thousand years outh to be more than enough!
+    $aTimes['year']   = array('nDivideBy'=>(86400 * 365) ,'sLabel'=>'year'   ,'nMax'=>( (86400 * 365.25) * 999)); //thousand years ought to be more than enough!
 
 
 
